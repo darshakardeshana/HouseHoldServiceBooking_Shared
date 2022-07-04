@@ -1,0 +1,332 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminPanel.master.cs" Inherits="Content_AdminPanel" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HouseHold Service Booking</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="<%=ResolveClientUrl("~/Content/AdminPanel/assets/vendor/fontawesome-free/css/all.min.css")%>" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Custom styles for this template-->
+    <link href="<%=ResolveClientUrl("~/Content/AdminPanel/assets/css/sb-admin-2.css")%>" rel="stylesheet" />
+    <style>
+        .mytable
+        {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body id="page-top text-gray-900" style="color:black !important;">
+
+    <form id="form1" runat="server">
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+                <!-- Sidebar - Brand -->
+                <br />
+                <asp:HyperLink CssClass="sidebar-brand d-flex align-items-center justify-content-center" runat="server">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">HouseHold Service Booking</div>
+                </asp:HyperLink>
+                <br />
+
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Navigation
+                </div>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" NavigateUrl="~/AdminPanel/Default.aspx" runat="server">
+                    <i class="fas fa-fw fa fa-chart-line"></i>
+                    <span>Dashboard</span>
+                    </asp:HyperLink>
+                </li>
+
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="CollapseService" aria-expanded="true" data-toggle="collapse" data-target="#CollapseService" runat="server">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Service</span>
+                    </asp:HyperLink>
+                    <div id="CollapseService" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/Service/ServiceAddEdit.aspx">Service Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/Service/ServiceList.aspx">Services List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+               
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="CollapseServiceProvider" aria-expanded="true" data-toggle="collapse" data-target="#CollapseServiceProvider" runat="server">
+                    <i class="fas fa-fw fa fa-user-o"></i>
+                    <span>ServiceProvider</span>
+                    </asp:HyperLink>
+                    <div id="CollapseServiceProvider" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/ServiceProvider/ServiceProviderAddEdit.aspx">Service Provider Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/ServiceProvider/ServiceProviderList.aspx">Service Provider List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="CollapseServiceProviderServices" aria-expanded="true" data-toggle="collapse" data-target="#CollapseServiceProviderServices" runat="server">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>ServiceProviderServices</span>
+                    </asp:HyperLink>
+                    <div id="CollapseServiceProviderServices" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/ServiceProviderServices/ServiceProviderServicesAddEdit.aspx">Service Provider<br />Services Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/ServiceProviderServices/ServiceProviderServicesList.aspx">Service Provider<br />Services List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="CollapseRating" aria-expanded="true" data-toggle="collapse" data-target="#CollapseRating" runat="server">
+                    <i class="fas fa-fw fa-star"></i>
+                    <span>Rating</span>
+                    </asp:HyperLink>
+                    <div id="CollapseRating" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/Rating/RatingAddEdit.aspx">Rating Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/Rating/RatingList.aspx">Rating List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" NavigateUrl="~/AdminPanel/Inquiry/InquiryList.aspx" runat="server">
+                    <i class="fas fa-fw fa fa-envelope"></i>
+                    <span>Inquiry</span>
+                    </asp:HyperLink>
+                </li>
+
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="CollapseUser" aria-expanded="true" data-toggle="collapse" data-target="#CollapseUser" runat="server">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>User</span>
+                    </asp:HyperLink>
+                    <div id="CollapseUser" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/AdminUser/AdminUserAddEdit.aspx">User Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/AdminUser/AdminUserList.aspx">User List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="CollapseBank" aria-expanded="true" data-toggle="collapse" data-target="#CollapseBank" runat="server">
+                    <i class="fas fa-fw fa-university"></i>
+                    <span>Bank</span>
+                    </asp:HyperLink>
+                    <div id="CollapseBank" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/Bank/BankAddEdit.aspx">Bank Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/Bank/BankList.aspx">Bank List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="collapseCountry" aria-expanded="true" data-toggle="collapse" data-target="#CollapseCountry" runat="server">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Country</span>
+                    </asp:HyperLink>
+                    <div id="CollapseCountry" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/Country/CountryAddEdit.aspx">Country Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/Country/CountryList.aspx">Country List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="CollapseState" aria-expanded="true" data-toggle="collapse" data-target="#CollapseState" runat="server">
+                    <i class="fas fa-fw fa-map-marker"></i>
+                    <span>State</span>
+                    </asp:HyperLink>
+                    <div id="CollapseState" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/State/StateAddEdit.aspx">State Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/State/StateList.aspx">State List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link collapsed" aria-controls="CollapseCity" aria-expanded="true" data-toggle="collapse" data-target="#CollapseCity" runat="server">
+                    <i class="fas fa-fw fa fa-building-o"></i>
+                    <span>City</span>
+                    </asp:HyperLink>
+                    <div id="CollapseCity" class="collapse" aria-labelledby="headingCountry" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/City/CityAddEdit.aspx">City Add/Edit</asp:HyperLink>
+                            <asp:HyperLink runat="server" CssClass="collapse-item" NavigateUrl="~/AdminPanel/City/CityList.aspx">City List</asp:HyperLink>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Sidebar Toggler (Sidebar) -->
+
+                <%--<div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>--%>
+            </ul>
+
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-gray-300 topbar mb-4 static-top shadow">
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-900 small">
+                                        <asp:Label runat="server" ID="lblDisplayName"></asp:Label>
+                                    </span>
+                                    <asp:Image ID="imgProfilePicture" runat="server" CssClass="img-profile rounded-circle" ImageUrl="~/Images/DefaultMaleProfileImage.jpg" />
+                                </a>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <asp:HyperLink runat="server" CssClass="dropdown-item" NavigateUrl="~/AdminPanel/ChangePassword.aspx">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Change Password
+                                    </asp:HyperLink>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+                        <h1 class="h3 mb-4 text-gray-900">
+                            <asp:ContentPlaceHolder runat="server" ID="cphPageHeaderText"></asp:ContentPlaceHolder>
+                        </h1>
+
+                        <div class="text-gray-900">
+                            <asp:ContentPlaceHolder runat="server" ID="cphPageContent"></asp:ContentPlaceHolder>
+                        </div>
+
+                    </div>
+                    <!-- /.container-fluid -->
+
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white fixed">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; HouseHold Service Booking 2020</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <asp:Button ID="btnLogout" CssClass="btn btn-outline-primary" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="cphScriptBlock" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <script src="<%=ResolveClientUrl("~/Content/AdminPanel/assets/vendor/jquery/jquery.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Content/AdminPanel/assets/vendor/bootstrap/js/bootstrap.bundle.min.js")%>"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="<%=ResolveClientUrl("~/Content/AdminPanel/assets/vendor/jquery-easing/jquery.easing.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Content/AdminPanel/assets/vendor/datatables/jquery.dataTables.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Content/AdminPanel/assets/vendor/datatables/dataTables.bootstrap4.min.js")%>"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="<%=ResolveClientUrl("~/Content/AdminPanel/assets/js/sb-admin-2.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Content/AdminPanel/assets/js/demo/datatables-demo.js")%>"></script>
+        <script type="text/javascript">
+            function UserDeleteConfirmation() {
+                return confirm("Are you sure you want to Delete ?");
+            }
+        </script>
+        <script type="text/javascript">
+            function openModal() {
+                $('#exampleModal').modal('show');
+            }
+        </script>
+    </form>
+</body>
+</html>

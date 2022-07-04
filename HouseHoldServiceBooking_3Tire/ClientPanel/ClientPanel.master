@@ -1,0 +1,234 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ClientPanel.master.cs" Inherits="Content_ClientPanel" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="~/ClientPanel/wp-content/uploads/2019/06/favicon.png" type="image/x-icon">
+    <link rel="icon" href="wp-content/uploads/2019/06/favicon.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Home Comfort &#8211; House Hold Service Booking</title>
+    <link rel="stylesheet" href="~/ClientPanel/wp-content/cache/min/1/ffb8c6c6d00dfaf39281548130889379.css" data-minify="1" />
+    <link rel='dns-prefetch' href='http://maps.google.com/' />
+    <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+    <link rel="alternate" type="application/rss+xml" title="Smartman &raquo; Feed" href="feed/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="Smartman &raquo; Comments Feed" href="comments/feed/index.html" />
+    <style type="text/css">
+        img.wp-smiley, img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CPoppins%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i&amp;subset=latin%2Clatin-ext" type="text/css" media="all" />
+    <script type="text/javascript" src='<%=ResolveClientUrl("~/ClientPanel/wp-content/cache/busting/1/smartman/wp-includes/js/jquery/jquery-1.12.4-wp.js") %>'></script>
+    <%--<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDcaOOcFcQ0hoTqANKZYz-0ii-J0aUoHjk&amp;ver=5.4.4"></script>--%>
+    <%--<script type="text/javascript" src='<%=ResolveClientUrl("~/ClientPanel/wp-content/google.js") %>'></script>--%>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDcaOOcFcQ0hoTqANKZYz-0ii-J0aUoHjk&amp;ver=5.4.4"></script>
+    <link rel="https://api.w.org/" href="wp-json/index.html" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="~/ClientPanel/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.4.4" />
+    <link rel="canonical" href="index.html" />
+    <link rel="shortlink" href="index.html" />
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important
+        }
+    </style>
+    <style type="text/css" id="kc-css-general">
+        .kc-off-notice {
+            display: inline-block !important
+        }
+
+        .kc-container {
+            max-width: 1170px
+        }
+    </style>
+    <style type="text/css" id="kc-css-render">
+	</style>
+</head>
+<body onload="myFunction();">
+    <form id="form1" runat="server">
+        <div class="page-wrapper">
+            <header class="main-header">
+                <div class="header-upper">
+                    <div class="inner-container">
+                        <div class="auto-container clearfix">
+                            <div class="logo-outer">
+                                <div class="logo">
+                                    <a href="index.html" title="Logo">
+                                        <asp:Image ID="imgLogo" runat="server" ImageUrl="~/ClientPanel/wp-content/uploads/2019/07/logo.png" AlternateText="logo" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="nav-outer clearfix">
+                                <div class="mobile-nav-toggler">
+                                    <span class="icon flaticon-menu-1"></span>
+                                </div>
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                                        <ul class="navigation clearfix">
+                                            <li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-22 dropdown">
+                                                <asp:HyperLink ID="hlHome" runat="server" title="Home" NavigateUrl="~/ClientPanel/Default.aspx" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-options="easing: easeOutQuart">Home</asp:HyperLink>
+                                                <%--<ul role="menu" class="submenu">
+                                                    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-18 active">
+                                                        <a title="Home Page 01" href="index.html">Home Page 01</a>
+                                                    </li>
+                                                    <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17">
+                                                        <a title="Home Page 02" href="home-page-02/index.html">Home Page 02</a>
+                                                    </li>
+                                                    <li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16">
+                                                        <a title="Home Page 03" href="home-page-03/index.html">Home Page 03</a>
+                                                    </li>
+                                                    <li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-23 dropdown">
+                                                        <a title="Header Styles" href="#">Header Styles</a>
+                                                        <ul role="menu" class="submenu">
+                                                            <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-21 active">
+                                                                <a title="Header Style One" href="index.html">Header Style One</a>
+                                                            </li>
+                                                            <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
+                                                                <a title="Header Style Two" href="home-page-02/index.html">Header Style Two</a>
+                                                            </li>
+                                                            <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+                                                                <a title="Header Style Three" href="home-page-03/index.html">Header Style Three</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>--%>
+                                            </li>
+                                            <li id="menu-item-263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-263 dropdown">
+                                                <asp:HyperLink ID="hlService" runat="server" title="Services" NavigateUrl="~/ClientPanel/Service.aspx" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-options="easing: easeOutQuart">Services</asp:HyperLink>
+                                                <%--<ul role="menu" class="submenu">
+                                                    <li id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-338">
+                                                        <a title="Services" href="services/index.html">Services</a>
+                                                    </li>
+                                                    <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332">
+                                                        <a title="Service Plumbing" href="service-plumbing/index.html">Service Plumbing</a>
+                                                    </li>
+                                                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333">
+                                                        <a title="Service Carpentry" href="service-carpentry/index.html">Service Carpentry</a>
+                                                    </li>
+                                                    <li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
+                                                        <a title="Service Electrical" href="service-electrical/index.html">Service Electrical</a>
+                                                    </li>
+                                                    <li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-335">
+                                                        <a title="Home Renovation" href="home-renovation/index.html">Home Renovation</a>
+                                                    </li>
+                                                    <li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336">
+                                                        <a title="Painting Decorating" href="painting-decorating/index.html">Painting Decorating</a>
+                                                    </li>
+                                                    <li id="menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-337">
+                                                        <a title="Doors Windows" href="doors-windows/index.html">Doors Windows</a>
+                                                    </li>
+                                                </ul>--%>
+                                            </li>
+                                            <li id="menu-item-448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-448">
+                                                <asp:HyperLink ID="hlRating" runat="server" title="Rating" NavigateUrl="~/ClientPanel/Rating.aspx" class="hvr-underline-from-left1" data-options="easing: easeOutQuart">Review</asp:HyperLink>
+                                            </li>
+                                            <li id="menu-item-449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-448">
+                                                <asp:HyperLink ID="hlContact" runat="server" title="Contact" NavigateUrl="~/ClientPanel/Contact.aspx" class="hvr-underline-from-left1" data-options="easing: easeOutQuart">Contact</asp:HyperLink>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                                <div class="outer-box clearfix">
+                                    <div class="btn-box ml-3">
+                                        <asp:HyperLink ID="hlServiceProviderLogin" runat="server" CssClass="theme-btn btn-style-one" NavigateUrl="~/ServiceProviderPanel/Login/LoginPage.aspx" style="color:black;">
+                                            <span class="btn-title">Service Provider Login</span>
+                                        </asp:HyperLink>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sticky-header">
+                    <div class="auto-container clearfix">
+                        <div class="logo pull-left">
+                            <a href="#">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/ClientPanel/wp-content/uploads/2019/07/logo.png" AlternateText="logo" />
+                            </a>
+                        </div>
+                        <div class="pull-right">
+                            <nav class="main-menu">
+                                <div class="navbar-collapse show collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu">
+                    <div class="menu-backdrop">
+                    </div>
+                    <div class="close-btn">
+                        <span class="icon flaticon-cancel-1"></span>
+                    </div>
+                    <nav class="menu-box">
+                        <div class="nav-logo">
+                            <a href="#">
+                                <asp:Image ID="Image2" runat="server" ImageUrl="~/ClientPanel/wp-content/uploads/2019/07/logo.png" AlternateText="logo" />
+                            </a>
+                        </div>
+                        <ul class="navigation clearfix">
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="kc_clfw">
+            </div>
+            <asp:ContentPlaceHolder ID="cphBody" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="clearfix">
+            </div>
+            <footer class="main-footer">
+                <div class="auto-container">
+                    <div class="footer-bottom">
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <div class="copyright">
+                                    © 2019 <a href="#">Home Comfort.</a>All rights reserved.
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <ul class="footer-links">
+                                    <li id="menu-item-454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-454">
+                                        <a title="Terms of Service" href="#" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Terms of Service
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-455">
+                                        <a title="Privacy Policy" href="#" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Privacy Policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="scroll-to-top scroll-to-target" data-target="html">
+            <span class="fa fa-angle-up"></span>
+        </div>
+        <%--<script type='text/javascript'>
+            var wpcf7 = { "apiSettings": { "root": "http:\/\/php7.commonsupport.com\/smartman\/wp-json\/contact-form-7\/v1", "namespace": "contact-form-7\/v1" } };
+        </script>--%>
+        <script type="text/javascript" src='<%=ResolveClientUrl("~/ClientPanel/wp-content/cache/min/1/06836b962940f7b855ccad25d3e96904.js") %>' data-minify="1" defer></script>
+        <asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
